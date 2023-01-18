@@ -44,3 +44,7 @@ C:\Users\prfev\source\repos\ToDoListDDD\obj\Release\netcoreapp3.1\ToDoListDDD.cs
 C:\Users\prfev\source\repos\ToDoListDDD\obj\Release\netcoreapp3.1\ToDoListDDD.dll
 C:\Users\prfev\source\repos\ToDoListDDD\obj\Release\netcoreapp3.1\ToDoListDDD.pdb
 C:\Users\prfev\source\repos\ToDoListDDD\obj\Release\netcoreapp3.1\ToDoListDDD.genruntimeconfig.cache
+C:\Users\prfev\source\repos\ToDoListDDD\bin\Release\netcoreapp3.1\MediatR.dll
+C:\Users\prfev\source\repos\ToDoListDDD\bin\Release\netcoreapp3.1\MediatR.Contracts.dll
+C:\Users\prfev\source\repos\ToDoListDDD\bin\Release\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\prfev\source\repos\ToDoListDDD\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll

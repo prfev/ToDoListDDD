@@ -1,23 +1,27 @@
-﻿using ToDoListDDD.Business.Handlers.Interfaces;
+﻿using MediatR;
+using System.Threading;
+using System.Threading.Tasks;
+using ToDoListDDD.API.Queries.Requests;
 using ToDoListDDD.Business.Queries.Responses;
 using ToDoListDDD.Domain.Repositories;
 
 namespace ToDoListDDD.Domain.Handlers
 {
-    public class GetIncompleteToDosHandler : IGetIncompleteToDosHandler
+    public class GetIncompleteToDosHandler : IRequestHandler<GetIncompleteToDosRequest, GetIncompleteToDosResponse>
     {
         IToDoRepository _repository;
         public GetIncompleteToDosHandler(IToDoRepository repository)
         {
             _repository = repository;
         }
-        public GetIncompleteToDosResponse Handle()
+        public Task<GetIncompleteToDosResponse> Handle(GetIncompleteToDosRequest request, CancellationToken cancellationToken)
         {
             var todoItems = _repository.GetIncompleteItems();
-            return new GetIncompleteToDosResponse
+            var result = new GetIncompleteToDosResponse
             {
                 IncompleteItems = todoItems
             };
+            return Task.FromResult(result);
         }
     }
 }

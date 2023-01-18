@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using ToDoListDDD.API.Commands.Requests;
 using ToDoListDDD.API.Queries.Requests;
@@ -12,12 +13,12 @@ namespace ToDoListDDD.API.Controllers
     {
         [HttpPost]
         [Route("")]
-        public IActionResult CreateToDo([FromServices]ICreateToDoItemHandler handler, [FromBody]CreateToDoItemRequest command)
+        public IActionResult CreateToDo([FromServices]IMediator mediator, [FromBody]CreateToDoItemRequest command)
         {
             try
             {
-                var response = handler.Handle(command);
-                return Ok(response);
+                var response = mediator.Send(command);
+                return Ok(response.Result);
             }
             catch(Exception e)
             {
@@ -26,12 +27,12 @@ namespace ToDoListDDD.API.Controllers
         }
         [HttpDelete]
         [Route("deleteItem")]
-        public IActionResult DeleteToDo([FromServices]IRemoveToDoItemHandler handler, [FromBody]RemoveToDoItemRequest command)
+        public IActionResult DeleteToDo([FromServices]IMediator mediator, [FromBody]RemoveToDoItemRequest command)
         {
             try
             {
-                var response = handler.Handle(command);
-                return Ok(response);
+                var response = mediator.Send(command);
+                return Ok(response.Result);
             }
             catch(Exception e)
             {
@@ -40,12 +41,12 @@ namespace ToDoListDDD.API.Controllers
         }
         [HttpPut]
         [Route("UpdateItem")]
-        public IActionResult UpdateToDo([FromServices]IUpdateToDoStatusHandler handler, [FromBody]UpdateToDoStatusRequest command)
+        public IActionResult UpdateToDo([FromServices]IMediator mediator, [FromBody]UpdateToDoStatusRequest command)
         {
             try
             {
-                var response = handler.Handle(command);
-                return Ok(response);
+                var response = mediator.Send(command);
+                return Ok(response.Result);
             }
             catch (Exception e)
             {
@@ -54,19 +55,20 @@ namespace ToDoListDDD.API.Controllers
         }
         [HttpGet]
         [Route("")]
-        public IActionResult GetAllToDos([FromServices] IGetAllToDoItemsHandler handler)
+        public IActionResult GetAllToDos([FromServices] IMediator mediator,[FromForm] GetAllToDosRequest query)
         {
-            var response = handler.Handle();
-            return Ok(response);
+
+            var response = mediator.Send(query);
+            return Ok(response.Result.ToDoItems);
         }
         [HttpGet]
         [Route("Search")]
-        public IActionResult GetToDoById([FromServices] IGetToDoByIdHandler handler, [FromBody] GetToDoByIdRequest command)
+        public IActionResult GetToDoById([FromServices] IMediator mediator, [FromBody] GetToDoByIdRequest query)
         {
             try
             {
-                var response = handler.Handle(command);
-                return Ok(response);
+                var response = mediator.Send(query);
+                return Ok(response.Result);
             }
             catch (Exception e)
             {
@@ -75,10 +77,10 @@ namespace ToDoListDDD.API.Controllers
         }
         [HttpGet]
         [Route("incomplete")]
-        public IActionResult GetIncompleteToDos([FromServices]IGetIncompleteToDosHandler handler)
+        public IActionResult GetIncompleteToDos([FromServices] IMediator mediator,[FromForm] GetIncompleteToDosRequest query)
         {
-            var response = handler.Handle();
-            return Ok(response);
+            var response = mediator.Send(query);
+            return Ok(response.Result.IncompleteItems);
         }
     }
 }

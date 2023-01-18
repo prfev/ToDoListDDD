@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using ToDoListDDD.Domain.Entities;
+using ToDoListDDD.Domain.Exceptions;
 using ToDoListDDD.Domain.Repositories;
 
 namespace ToDoListDDD.Infrastructure
@@ -19,7 +20,7 @@ namespace ToDoListDDD.Infrastructure
         }
         public ToDoItem GetItemById(long id)
         {
-                return _context.ToDoItems.Find(id);
+            return _context.ToDoItems.Find(id);
         }
         public IEnumerable<ToDoItem> GetIncompleteItems()
         {

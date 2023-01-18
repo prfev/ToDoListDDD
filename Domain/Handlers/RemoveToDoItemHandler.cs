@@ -1,33 +1,35 @@
-﻿using System.Collections.Generic;
+﻿using MediatR;
+using System.Threading;
+using System.Threading.Tasks;
 using ToDoListDDD.API.Commands.Requests;
 using ToDoListDDD.Business.Commands.Responses;
-using ToDoListDDD.Business.Handlers.Interfaces;
 using ToDoListDDD.Domain.Exceptions;
 using ToDoListDDD.Domain.Repositories;
 
 namespace ToDoListDDD.Domain.Handlers
 {
-    public class RemoveToDoItemHandler : IRemoveToDoItemHandler
+    public class RemoveToDoItemHandler : IRequestHandler<RemoveToDoItemRequest,RemoveToDoItemResponse>
     {
         IToDoRepository _repository;
         public RemoveToDoItemHandler(IToDoRepository repository)
         {
             _repository = repository;
         }
-        public RemoveToDoItemResponse Handle(RemoveToDoItemRequest command)
+        public Task<RemoveToDoItemResponse> Handle(RemoveToDoItemRequest request, CancellationToken cancellationToken)
         {
             try
             {
-                _repository.Remove(command.Id);
-                return new RemoveToDoItemResponse
+                _repository.Remove(request.Id);
+                var result = new RemoveToDoItemResponse
                 {
                     Status = "Success!!",
                     Message = "Item Deleted!!"
                 };
+                return Task.FromResult(result);
             }
             catch
             {
-                throw new ToDoIdIsNotValidException($"Id: {command.Id} doesn't exist in DataBase! Please try again.");
+                throw new ToDoIdIsNotValidException($"Id: {request.Id} doesn't exist in DataBase! Please try again.");
             }
         }
     }

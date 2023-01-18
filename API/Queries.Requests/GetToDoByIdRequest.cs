@@ -1,6 +1,9 @@
-﻿namespace ToDoListDDD.API.Queries.Requests
+﻿using MediatR;
+using ToDoListDDD.Business.Queries.Responses;
+
+namespace ToDoListDDD.API.Queries.Requests
 {
-    public class GetToDoByIdRequest
+    public class GetToDoByIdRequest : IRequest<GetToDoByIdResponse>
     {
         public long Id { get; set; }
     }

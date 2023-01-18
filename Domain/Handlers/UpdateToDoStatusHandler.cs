@@ -1,24 +1,26 @@
-﻿using ToDoListDDD.API.Commands.Requests;
+﻿using MediatR;
+using System.Threading;
+using System.Threading.Tasks;
+using ToDoListDDD.API.Commands.Requests;
 using ToDoListDDD.Business.Commands.Responses;
-using ToDoListDDD.Business.Handlers.Interfaces;
 using ToDoListDDD.Domain.Exceptions;
 using ToDoListDDD.Domain.Repositories;
 
 namespace ToDoListDDD.Domain.Handlers
 {
-    public class UpdateToDoStatusHandler : IUpdateToDoStatusHandler
+    public class UpdateToDoStatusHandler : IRequestHandler<UpdateToDoStatusRequest,UpdateToDoStatusResponse>
     {
         IToDoRepository _repository;
         public UpdateToDoStatusHandler(IToDoRepository repository)
         {
             _repository = repository;
         }
-        public UpdateToDoStatusResponse Handle(UpdateToDoStatusRequest command)
+        public Task<UpdateToDoStatusResponse> Handle(UpdateToDoStatusRequest request, CancellationToken cancellationToken)
         {
             try
             {
-                var updatedTodo = _repository.UpdateStatus(command.Id);
-                return new UpdateToDoStatusResponse
+                var updatedTodo = _repository.UpdateStatus(request.Id);
+                var result = new UpdateToDoStatusResponse
                 {
                     Id = updatedTodo.Id,
                     Name = updatedTodo.Name,
@@ -26,10 +28,11 @@ namespace ToDoListDDD.Domain.Handlers
                     IsComplete = updatedTodo.IsComplete,
                     LastChanged = updatedTodo.LastChanged
                 };
+                return Task.FromResult(result);
             }
             catch
             {
-                throw new ToDoIdIsNotValidException($"Id: {command.Id} doesn't exist in DataBase! Please try again.");
+                throw new ToDoIdIsNotValidException($"Id: {request.Id} doesn't exist in DataBase! Please try again.");
             }
         }
     }

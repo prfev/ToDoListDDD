@@ -1,14 +1,16 @@
-﻿using System;
+﻿using MediatR;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 using ToDoListDDD.API.Commands.Requests;
 using ToDoListDDD.Business.Commands.Responses;
-using ToDoListDDD.Business.Handlers.Interfaces;
 using ToDoListDDD.Domain.Entities;
 using ToDoListDDD.Domain.Repositories;
 using ToDoListDDD.Domain.Services;
 
 namespace ToDoListDDD.Domain.Handlers
 {
-    public class CreateToDoItemHandler : ICreateToDoItemHandler
+    public class CreateToDoItemHandler : IRequestHandler<CreateToDoItemRequest, CreateToDoItemResponse>
     {
         IToDoRepository _repository;
         IToDoValidationService _validationService;
@@ -17,14 +19,12 @@ namespace ToDoListDDD.Domain.Handlers
             _repository = repository;
             _validationService = validationService;
         }
-        public CreateToDoItemResponse Handle(CreateToDoItemRequest command)
+        public Task<CreateToDoItemResponse> Handle(CreateToDoItemRequest request, CancellationToken cancellationToken)
         {
-
-            _validationService.NameIsValid(command.Name);
-
-            var todoItem = new ToDoItem(command.Name, command.Description);
+            _validationService.NameIsValid(request.Name);
+            var todoItem = new ToDoItem(request.Name, request.Description);
             _repository.Save(todoItem);
-            return new CreateToDoItemResponse
+            var result = new CreateToDoItemResponse
             {
                 Id = todoItem.Id,
                 Name = todoItem.Name,
@@ -32,7 +32,7 @@ namespace ToDoListDDD.Domain.Handlers
                 Description = todoItem.Description,
                 LastChanged = DateTime.Now
             };
-
+            return Task.FromResult(result);
         }
     }
 }
