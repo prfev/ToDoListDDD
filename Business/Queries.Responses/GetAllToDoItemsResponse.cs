@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using ToDoListDDD.Domain.Entities;
 
-namespace ToDoListDDD.Domain.Commands.Responses
+namespace ToDoListDDD.Business.Queries.Responses
 {
     public class GetAllToDoItemsResponse
     {

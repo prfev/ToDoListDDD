@@ -1,12 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ToDoListDDD.Domain.Commands.Requests;
-using ToDoListDDD.Domain.Handlers;
+using ToDoListDDD.API.Commands.Requests;
+using ToDoListDDD.API.Queries.Requests;
+using ToDoListDDD.Business.Handlers.Interfaces;
 
-namespace ToDoListDDD.Controllers
+namespace ToDoListDDD.API.Controllers
 {
     [ApiController]
     [Route("v1/todoItems")]

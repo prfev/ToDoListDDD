@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ToDoListDDD.Domain.Commands.Requests;
-using ToDoListDDD.Domain.Commands.Responses;
+﻿using ToDoListDDD.API.Commands.Requests;
+using ToDoListDDD.Business.Commands.Responses;
+using ToDoListDDD.Business.Handlers.Interfaces;
 using ToDoListDDD.Domain.Exceptions;
-using ToDoListDDD.Infrastructure;
+using ToDoListDDD.Domain.Repositories;
 
 namespace ToDoListDDD.Domain.Handlers
 {

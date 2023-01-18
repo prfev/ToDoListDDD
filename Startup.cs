@@ -4,8 +4,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ToDoListDDD.Domain.Handlers;
+using ToDoListDDD.Domain.Repositories;
 using ToDoListDDD.Domain.Services;
 using ToDoListDDD.Infrastructure;
+using ToDoListDDD.Business.Handlers.Interfaces;
 
 namespace ToDoListDDD
 {
@@ -23,6 +25,7 @@ namespace ToDoListDDD
         {
             services.AddControllers();
             services.AddDbContext<ToDoDbContext>();
+            services.AddTransient<IGetAllToDoItemsHandler, GetAllToDoItemsHandler>();
             services.AddTransient<IGetToDoByIdHandler, GetToDoByIdHandler>();
             services.AddTransient<ICreateToDoItemHandler, CreateToDoItemHandler>();
             services.AddTransient<IToDoRepository, ToDoRepository>();

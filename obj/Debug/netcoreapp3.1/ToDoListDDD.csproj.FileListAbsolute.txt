@@ -37,10 +37,13 @@ C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\ToDoListDDD.Asse
 C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\ToDoListDDD.csproj.CoreCompileInputs.cache
 C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\ToDoListDDD.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\staticwebassets\ToDoListDDD.StaticWebAssets.Manifest.cache
+C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\staticwebassets\ToDoListDDD.StaticWebAssets.Pack.cache
+C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.ToDoListDDD.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.ToDoListDDD.props
+C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.ToDoListDDD.props
+C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.ToDoListDDD.props
 C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\ToDoListDDD.RazorTargetAssemblyInfo.cache
 C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\ToDoListDDD.csproj.CopyComplete
 C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\ToDoListDDD.dll
 C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\ToDoListDDD.pdb
 C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\ToDoListDDD.genruntimeconfig.cache
-C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\staticwebassets\ToDoListDDD.StaticWebAssets.xml
-C:\Users\prfev\source\repos\ToDoListDDD\obj\Debug\netcoreapp3.1\scopedcss\bundle\ToDoListDDD.styles.css

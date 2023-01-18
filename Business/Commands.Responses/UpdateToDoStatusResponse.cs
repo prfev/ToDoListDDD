@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace ToDoListDDD.Domain.Commands.Responses
+namespace ToDoListDDD.Business.Commands.Responses
 {
     public class UpdateToDoStatusResponse
     {

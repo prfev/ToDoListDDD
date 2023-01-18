@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ToDoListDDD.Domain.Commands.Responses;
-using ToDoListDDD.Infrastructure;
+﻿using ToDoListDDD.Business.Handlers.Interfaces;
+using ToDoListDDD.Business.Queries.Responses;
+using ToDoListDDD.Domain.Repositories;
 
 namespace ToDoListDDD.Domain.Handlers
 {

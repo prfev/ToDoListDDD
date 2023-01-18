@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using ToDoListDDD.Domain.Entities;
-using ToDoListDDD.Domain.Exceptions;
+using ToDoListDDD.Domain.Repositories;
 
 namespace ToDoListDDD.Infrastructure
 {

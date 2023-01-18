@@ -1,4 +1,4 @@
-﻿namespace ToDoListDDD.Domain.Commands.Requests
+﻿namespace ToDoListDDD.API.Commands.Requests
 {
     public class CreateToDoItemRequest
     {

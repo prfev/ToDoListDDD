@@ -1,7 +1,8 @@
-﻿using ToDoListDDD.Domain.Commands.Requests;
-using ToDoListDDD.Domain.Commands.Responses;
+﻿using ToDoListDDD.API.Queries.Requests;
+using ToDoListDDD.Business.Handlers.Interfaces;
+using ToDoListDDD.Business.Queries.Responses;
 using ToDoListDDD.Domain.Exceptions;
-using ToDoListDDD.Infrastructure;
+using ToDoListDDD.Domain.Repositories;
 
 namespace ToDoListDDD.Domain.Handlers
 {
