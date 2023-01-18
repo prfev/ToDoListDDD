@@ -24,7 +24,7 @@ namespace ToDoListDDD.Domain.Handlers
         {
 
             _validationService.NameIsValid(command.Name);
-            
+
             var todoItem = new ToDoItem(command.Name, command.Description);
             _repository.Save(todoItem);
             return new CreateToDoItemResponse
@@ -35,6 +35,7 @@ namespace ToDoListDDD.Domain.Handlers
                 Description = todoItem.Description,
                 CreatedAt = DateTime.Now
             };
+
         }
     }
 }

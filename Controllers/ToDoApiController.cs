@@ -16,8 +16,15 @@ namespace ToDoListDDD.Controllers
         [Route("")]
         public IActionResult CreateToDo([FromServices]ICreateToDoItemHandler handler, [FromBody]CreateToDoItemRequest command)
         {
-            var response = handler.Handle(command);
-            return Ok(response);           
+            try
+            {
+                var response = handler.Handle(command);
+                return Ok(response);
+            }
+            catch(Exception e)
+            {
+                return Ok(e.Message);
+            }
         }
         [HttpDelete]
         [Route("deleteItem")]

@@ -13,12 +13,9 @@ namespace ToDoListDDD.Domain.Services
             _nameValidator.Execute(name);
             if (!_nameValidator.IsValid)
             {
-                throw new ToDoNameIsNotValidException
-                {
-                    Status = "Name is not Valid!"
-                };
+                throw new ToDoNameIsNotValidException("Name is not valid! Try again.");
             }
-            
+
         }
     }
 }
