@@ -6,6 +6,9 @@ C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\ToDoListDDD.runt
 C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\ToDoListDDD.runtimeconfig.dev.json
 C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\ToDoListDDD.dll
 C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\ToDoListDDD.pdb
+C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\MediatR.dll
+C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\MediatR.Contracts.dll
+C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
 C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
@@ -13,6 +16,7 @@ C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\Microsoft.Entity
 C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
 C:\Users\prfev\source\repos\ToDoListDDD\bin\Debug\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll

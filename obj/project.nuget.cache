@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "pNE2Zf8cTCvo1dSMD+ZiMdx6lossQExP3WgNY2Q28NFT5MSxxfUvaoYZghyu5lV2tLADrdiflrDMX011k9NEcw==",
+  "dgSpecHash": "Tqq7qcwJvLo4BhrRB7IXmxhmz9D6l048X/Cifwe4zHz83v0wO6mgF4ZxzQcH60Pu/blv0u03wK7pllSOJvTlBg==",
   "success": true,
   "projectFilePath": "C:\\Users\\prfev\\source\\repos\\ToDoListDDD\\ToDoListDDD.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\prfev\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\prfev\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\prfev\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\prfev\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
     "C:\\Users\\prfev\\.nuget\\packages\\microsoft.data.sqlite.core\\3.0.1\\microsoft.data.sqlite.core.3.0.1.nupkg.sha512",
     "C:\\Users\\prfev\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.0.1\\microsoft.dotnet.platformabstractions.3.0.1.nupkg.sha512",
@@ -20,7 +23,7 @@
     "C:\\Users\\prfev\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.0.1\\microsoft.extensions.configuration.abstractions.3.0.1.nupkg.sha512",
     "C:\\Users\\prfev\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.0.1\\microsoft.extensions.configuration.binder.3.0.1.nupkg.sha512",
     "C:\\Users\\prfev\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.0.1\\microsoft.extensions.dependencyinjection.3.0.1.nupkg.sha512",
-    "C:\\Users\\prfev\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.1\\microsoft.extensions.dependencyinjection.abstractions.3.0.1.nupkg.sha512",
+    "C:\\Users\\prfev\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\prfev\\.nuget\\packages\\microsoft.extensions.dependencymodel\\3.0.1\\microsoft.extensions.dependencymodel.3.0.1.nupkg.sha512",
     "C:\\Users\\prfev\\.nuget\\packages\\microsoft.extensions.logging\\3.0.1\\microsoft.extensions.logging.3.0.1.nupkg.sha512",
     "C:\\Users\\prfev\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.1\\microsoft.extensions.logging.abstractions.3.0.1.nupkg.sha512",
