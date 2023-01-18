@@ -8,6 +8,6 @@ namespace ToDoListDDD.Business.Commands.Responses
         public string Name { get; set; }
         public bool IsComplete { get; set; }
         public string Description { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public DateTime LastChanged { get; set; } = DateTime.Now;
     }
 }

@@ -23,7 +23,8 @@ namespace ToDoListDDD.Domain.Handlers
                     Id = todoItem.Id,
                     Name = todoItem.Name,
                     IsComplete = todoItem.IsComplete,
-                    Description = todoItem.Description
+                    Description = todoItem.Description,
+                    LastChanged = todoItem.LastChanged
                 };
             }
             catch

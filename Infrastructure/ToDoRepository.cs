@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using ToDoListDDD.Domain.Entities;
 using ToDoListDDD.Domain.Repositories;
@@ -42,6 +43,7 @@ namespace ToDoListDDD.Infrastructure
         {
             var todoItem = _context.ToDoItems.Find(id);
             todoItem.IsComplete ^= true;
+            todoItem.LastChanged = DateTime.Now;
             _context.SaveChanges();
             return todoItem;
             

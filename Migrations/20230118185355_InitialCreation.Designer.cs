@@ -9,7 +9,7 @@ using ToDoListDDD.Infrastructure;
 namespace ToDoListDDD.Migrations
 {
     [DbContext(typeof(ToDoDbContext))]
-    [Migration("20230117151937_InitialCreation")]
+    [Migration("20230118185355_InitialCreation")]
     partial class InitialCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,14 +24,14 @@ namespace ToDoListDDD.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsComplete")
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("LastChanged")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");

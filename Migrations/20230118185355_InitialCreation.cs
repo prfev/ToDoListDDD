@@ -16,7 +16,7 @@ namespace ToDoListDDD.Migrations
                     Name = table.Column<string>(nullable: true),
                     IsComplete = table.Column<bool>(nullable: false),
                     Description = table.Column<string>(nullable: true),
-                    CreatedAt = table.Column<DateTime>(nullable: false)
+                    LastChanged = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {

@@ -10,12 +10,12 @@ namespace ToDoListDDD.Domain.Entities
             Name = name;
             IsComplete = false;
             Description = description;
-            CreatedAt = DateTime.Now;
+            LastChanged = DateTime.Now;
         }
         public long Id {get; set;}
         public string Name { get; set; }
         public bool IsComplete { get; set; }
         public string Description { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public DateTime LastChanged { get; set; }
     }
 }

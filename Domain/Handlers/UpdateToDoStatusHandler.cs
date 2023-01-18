@@ -24,7 +24,7 @@ namespace ToDoListDDD.Domain.Handlers
                     Name = updatedTodo.Name,
                     Description = updatedTodo.Description,
                     IsComplete = updatedTodo.IsComplete,
-                    CreatedAt = updatedTodo.CreatedAt
+                    LastChanged = updatedTodo.LastChanged
                 };
             }
             catch

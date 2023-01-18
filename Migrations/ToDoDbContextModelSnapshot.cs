@@ -22,14 +22,14 @@ namespace ToDoListDDD.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsComplete")
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("LastChanged")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");

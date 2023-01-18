@@ -30,7 +30,7 @@ namespace ToDoListDDD.Domain.Handlers
                 Name = todoItem.Name,
                 IsComplete = todoItem.IsComplete,
                 Description = todoItem.Description,
-                CreatedAt = DateTime.Now
+                LastChanged = DateTime.Now
             };
 
         }
