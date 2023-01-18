@@ -7,6 +7,6 @@ namespace ToDoListDDD.Domain.Commands.Requests
 {
     public class RemoveToDoItemRequest
     {
-        public long id { get; set; }
+        public long Id { get; set; }
     }
 }

@@ -23,22 +23,36 @@ namespace ToDoListDDD.Controllers
             }
             catch(Exception e)
             {
-                return Ok(e.Message);
+                return BadRequest(e.Message);
             }
         }
         [HttpDelete]
         [Route("deleteItem")]
         public IActionResult DeleteToDo([FromServices]IRemoveToDoItemHandler handler, [FromBody]RemoveToDoItemRequest command)
         {
-            var response = handler.Handle(command);
-            return Ok(response);
+            try
+            {
+                var response = handler.Handle(command);
+                return Ok(response);
+            }
+            catch(Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
         [HttpPut]
         [Route("UpdateItem")]
         public IActionResult UpdateToDo([FromServices]IUpdateToDoStatusHandler handler, [FromBody]UpdateToDoStatusRequest command)
         {
-            var response = handler.Handle(command);
-            return Ok(response);
+            try
+            {
+                var response = handler.Handle(command);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
         [HttpGet]
         [Route("")]
@@ -51,8 +65,15 @@ namespace ToDoListDDD.Controllers
         [Route("Search")]
         public IActionResult GetToDoById([FromServices] IGetToDoByIdHandler handler, [FromBody] GetToDoByIdRequest command)
         {
-            var response = handler.Handle(command);
-            return Ok(response);
+            try
+            {
+                var response = handler.Handle(command);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
         [HttpGet]
         [Route("incomplete")]
