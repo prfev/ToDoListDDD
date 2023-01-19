@@ -6,7 +6,7 @@ using ToDoListDDD.Business.Commands.Responses;
 using ToDoListDDD.Domain.Exceptions;
 using ToDoListDDD.Domain.Repositories;
 
-namespace ToDoListDDD.Domain.Handlers
+namespace ToDoListDDD.Business.Handlers
 {
     public class UpdateToDoStatusHandler : IRequestHandler<UpdateToDoStatusRequest,UpdateToDoStatusResponse>
     {

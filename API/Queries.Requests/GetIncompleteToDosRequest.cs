@@ -4,7 +4,5 @@ using ToDoListDDD.Business.Queries.Responses;
 namespace ToDoListDDD.API.Queries.Requests
 {
     public class GetIncompleteToDosRequest : IRequest<GetIncompleteToDosResponse> 
-    { 
-        //public string Message { get; set; } 
-    }
+    {    }
 }

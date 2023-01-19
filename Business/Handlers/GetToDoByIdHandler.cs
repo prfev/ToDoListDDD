@@ -6,7 +6,7 @@ using ToDoListDDD.Business.Queries.Responses;
 using ToDoListDDD.Domain.Exceptions;
 using ToDoListDDD.Domain.Repositories;
 
-namespace ToDoListDDD.Domain.Handlers
+namespace ToDoListDDD.Business.Handlers
 {
     public class GetToDoByIdHandler : IRequestHandler<GetToDoByIdRequest,GetToDoByIdResponse>
     {

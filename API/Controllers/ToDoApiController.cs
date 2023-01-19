@@ -57,7 +57,6 @@ namespace ToDoListDDD.API.Controllers
         [Route("")]
         public IActionResult GetAllToDos([FromServices] IMediator mediator,[FromForm] GetAllToDosRequest query)
         {
-
             var response = mediator.Send(query);
             return Ok(response.Result.ToDoItems);
         }

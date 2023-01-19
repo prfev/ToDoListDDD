@@ -5,7 +5,7 @@ using ToDoListDDD.API.Queries.Requests;
 using ToDoListDDD.Business.Queries.Responses;
 using ToDoListDDD.Domain.Repositories;
 
-namespace ToDoListDDD.Domain.Handlers
+namespace ToDoListDDD.Business.Handlers
 {
     public class GetAllToDoItemsHandler : IRequestHandler<GetAllToDosRequest, GetAllToDoItemsResponse>
     {

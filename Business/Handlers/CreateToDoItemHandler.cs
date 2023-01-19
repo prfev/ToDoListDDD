@@ -8,7 +8,7 @@ using ToDoListDDD.Domain.Entities;
 using ToDoListDDD.Domain.Repositories;
 using ToDoListDDD.Domain.Services;
 
-namespace ToDoListDDD.Domain.Handlers
+namespace ToDoListDDD.Business.Handlers
 {
     public class CreateToDoItemHandler : IRequestHandler<CreateToDoItemRequest, CreateToDoItemResponse>
     {
