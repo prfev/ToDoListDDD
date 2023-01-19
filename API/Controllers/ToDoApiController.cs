@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using ToDoListDDD.API.Commands.Requests;
 using ToDoListDDD.API.Queries.Requests;
-using ToDoListDDD.Business.Handlers.Interfaces;
 
 namespace ToDoListDDD.API.Controllers
 {
