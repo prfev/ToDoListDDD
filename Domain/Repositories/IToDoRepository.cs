@@ -11,6 +11,7 @@ namespace ToDoListDDD.Domain.Repositories
         void Save(ToDoItem todoItem);
         void Remove(long id);
         ToDoItem UpdateStatus(long id);
+        ToDoItem UpdateDescription(long id, string description);
 
     }
 }

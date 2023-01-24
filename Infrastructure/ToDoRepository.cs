@@ -49,6 +49,15 @@ namespace ToDoListDDD.Infrastructure
             return todoItem;
             
         }
+        public ToDoItem UpdateDescription(long id, string description)
+        {
+            var todoItem = _context.ToDoItems.Find(id);
+            todoItem.Description = description;
+            todoItem.LastChanged = DateTime.Now;
+            _context.SaveChanges();
+            return todoItem;
+
+        }
 
     }
 }
